@@ -34,7 +34,8 @@ public class ControladorListaProductos {
             } while (ControladorMain.getListaDeProductos().getActual() != ControladorMain.getListaDeProductos().getCabeza());
         }
 
-        vistaListaProductos.getLblResultado().setText(vistaListaProductos.getLblResultado().getText()+total);
+        vistaListaProductos.getLblResultado()
+                .setText("El total neto de la compra es de $" + total);
         vistaListaProductos.getTabla().setModel(vistaListaProductos.getModelo());
         vistaListaProductos.getModelo().fireTableDataChanged();
     }
